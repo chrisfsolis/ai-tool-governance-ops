@@ -1,0 +1,47 @@
+{
+  "reviews": [
+    {
+      "id": "privacy_review",
+      "label": "Privacy review",
+      "when": {"uses_pii": true},
+      "control": "Do not upload customer PII until privacy review approves the use case."
+    },
+    {
+      "id": "security_review",
+      "label": "Security review",
+      "when": {"uses_customer_data": true},
+      "control": "Enable audit logging and validate access controls before customer data use."
+    },
+    {
+      "id": "finance_review",
+      "label": "Finance review",
+      "when": {"estimated_monthly_cost_gt": 500},
+      "control": "Review monthly spend and assign a budget owner."
+    },
+    {
+      "id": "vendor_risk_review",
+      "label": "Vendor risk review",
+      "when": {"vendor_type": "external", "requested_use": "production"},
+      "control": "Vendor must pass security review before production use."
+    },
+    {
+      "id": "leadership_approval",
+      "label": "Leadership approval",
+      "when": {"risk_level": "high"},
+      "control": "Leadership must approve the residual risk before launch."
+    }
+  ],
+  "baseline_controls": [
+    "Use approved enterprise account only.",
+    "Enable audit logging.",
+    "Require human review of AI-generated outputs."
+  ],
+  "decisions": {
+    "low_pilot": "Approved for pilot",
+    "low_production": "Approved with controls",
+    "privacy": "Requires privacy review",
+    "security": "Requires security review",
+    "finance": "Requires finance review",
+    "high": "Not approved until risks are reduced"
+  }
+}

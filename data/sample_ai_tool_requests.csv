@@ -1,0 +1,9 @@
+tool_name,business_use_case,requesting_team,owner,vendor_type,data_type,uses_customer_data,uses_pii,estimated_monthly_usage,estimated_monthly_cost,requested_use
+Internal Writing Assistant,Draft internal communications,Communications,Avery Chen,internal,internal,no,no,800,120,pilot
+Public Data Chatbot,Answer FAQs from public website content,Marketing,Jordan Lee,external,public,no,no,2500,300,pilot
+AI Coding Assistant,Support code completion and test generation,Engineering,Sam Rivera,external,internal,no,no,5000,450,production
+Customer Support AI,Triage customer tickets and suggest replies,Support,Morgan Patel,external,customer data,yes,no,7000,900,production
+Sales Email Generator,Generate first drafts of prospecting emails,Sales,Taylor Brooks,external,internal,no,no,3500,550,pilot
+Confidential Data Analyst,Analyze confidential strategy documents,Strategy,Riley Kim,internal,confidential,no,no,1200,250,pilot
+AI Meeting Note Taker,Summarize meetings and action items,Operations,Casey Nguyen,external,internal,no,no,1800,200,pilot
+High-Cost Production Workflow,Automate production document review,Legal,Drew Smith,external,confidential,no,no,15000,2500,production
