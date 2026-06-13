@@ -1,9 +1,13 @@
-tool_name,business_use_case,requesting_team,owner,vendor_type,data_type,uses_customer_data,uses_pii,estimated_monthly_usage,estimated_monthly_cost,requested_use
-Internal Writing Assistant,Draft internal communications,Communications,Avery Chen,internal,internal,no,no,800,120,pilot
-Public Data Chatbot,Answer FAQs from public website content,Marketing,Jordan Lee,external,public,no,no,2500,300,pilot
-AI Coding Assistant,Support code completion and test generation,Engineering,Sam Rivera,external,internal,no,no,5000,450,production
-Customer Support AI,Triage customer tickets and suggest replies,Support,Morgan Patel,external,customer data,yes,no,7000,900,production
-Sales Email Generator,Generate first drafts of prospecting emails,Sales,Taylor Brooks,external,internal,no,no,3500,550,pilot
-Confidential Data Analyst,Analyze confidential strategy documents,Strategy,Riley Kim,internal,confidential,no,no,1200,250,pilot
-AI Meeting Note Taker,Summarize meetings and action items,Operations,Casey Nguyen,external,internal,no,no,1800,200,pilot
-High-Cost Production Workflow,Automate production document review,Legal,Drew Smith,external,confidential,no,no,15000,2500,production
+tool_name,business_use_case,requesting_team,business_owner,vendor_name,vendor_type,data_type,uses_customer_data,uses_pii,estimated_monthly_usage,estimated_monthly_cost,requested_use,notes
+Internal Writing Assistant,Draft internal communications and knowledge base updates,Communications,Avery Chen,Internal AI Platform,internal,internal,no,no,800,120,pilot,Low-risk internal productivity use case
+AI Coding Assistant,Support code completion test generation and developer learning,Engineering,Sam Rivera,CodePilot Enterprise,external,internal,no,no,5000,450,production,Enterprise account with code usage guidelines
+AI Meeting Note Taker,Summarize meetings and action items,Operations,Casey Nguyen,MeetingMind,external,internal,no,no,1800,200,pilot,Pilot limited to non-confidential meetings
+Customer Support Chatbot,Suggest answers for customer support tickets,Support,Morgan Patel,HelpBot AI,external,customer data,yes,no,7000,900,production,Uses customer ticket history
+Sales Email Generator,Generate first drafts of prospecting emails,Sales,Taylor Brooks,SalesGen AI,external,internal,no,no,3500,550,pilot,Requires review before sending externally
+HR Resume Screening Tool,Rank resumes and summarize candidate qualifications,People Ops,Jamie Wilson,HireScreen AI,external,PII,no,yes,2200,650,pilot,Potential employment and privacy impact
+Legal Contract Summarizer,Summarize vendor contracts and flag key clauses,Legal,Riley Kim,ClauseWise,external,confidential,no,no,1200,300,pilot,Confidential legal data
+Security Alert Triage Assistant,Cluster security alerts and suggest remediation steps,Security,Dakota Green,Internal SecAI,internal,confidential,no,no,9000,480,production,Internal-only security operations use
+Finance Forecasting Assistant,Forecast revenue scenarios from finance planning data,Finance,Quinn Martinez,ForecastIQ,external,confidential,no,no,2500,700,pilot,Budget owner required
+External LLM API Production,Power customer-facing AI feature in production,Product,Drew Smith,LLMCloud,external,customer data,yes,no,15000,1800,production,Needs vendor security and customer data review
+Marketing Content Generator,Create campaign copy from public product information,Marketing,Jordan Lee,MarketMuse,external,public,no,no,3000,250,pilot,Public data only
+High-Cost AI Analytics Workflow,Run large-scale AI analysis over operational metrics,Analytics,Parker Davis,AnalyticsGPT,external,internal,no,no,50000,4200,production,High monthly spend and production dependency

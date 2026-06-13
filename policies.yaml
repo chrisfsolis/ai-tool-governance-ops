@@ -2,46 +2,77 @@
   "reviews": [
     {
       "id": "privacy_review",
+      "name": "Privacy Review for PII",
       "label": "Privacy review",
-      "when": {"uses_pii": true},
-      "control": "Do not upload customer PII until privacy review approves the use case."
+      "description": "Ensures personal information is handled only in approved AI tools with documented purpose, retention, and consent controls.",
+      "when": {
+        "uses_pii": true
+      },
+      "severity": "high",
+      "required_action": "Privacy team approval before use with PII.",
+      "control": "Do not upload customer PII into unapproved AI tools."
     },
     {
       "id": "security_review",
+      "name": "Security Review for Customer Data",
       "label": "Security review",
-      "when": {"uses_customer_data": true},
+      "description": "Validates access control, logging, data protection, and secure configuration before customer data is processed.",
+      "when": {
+        "uses_customer_data": true
+      },
+      "severity": "high",
+      "required_action": "Security review before customer data use.",
       "control": "Enable audit logging and validate access controls before customer data use."
     },
     {
       "id": "finance_review",
+      "name": "Finance Review for High Spend",
       "label": "Finance review",
-      "when": {"estimated_monthly_cost_gt": 500},
-      "control": "Review monthly spend and assign a budget owner."
+      "description": "Routes higher-cost AI workflows for budget ownership and spend monitoring.",
+      "when": {
+        "estimated_monthly_cost_gt": 500
+      },
+      "severity": "medium",
+      "required_action": "Finance approval and budget owner assignment.",
+      "control": "Review monthly spend after 30 days."
     },
     {
       "id": "vendor_risk_review",
+      "name": "Vendor Risk Review for External Production Use",
       "label": "Vendor risk review",
-      "when": {"vendor_type": "external", "requested_use": "production"},
-      "control": "Vendor must pass security review before production use."
+      "description": "Requires third-party risk review when an external AI provider is used in production.",
+      "when": {
+        "vendor_type": "external",
+        "requested_use": "production"
+      },
+      "severity": "high",
+      "required_action": "Vendor security review before production deployment.",
+      "control": "Complete vendor security review before production deployment."
     },
     {
       "id": "leadership_approval",
-      "label": "Leadership approval",
-      "when": {"risk_level": "high"},
-      "control": "Leadership must approve the residual risk before launch."
+      "name": "Leadership Review for High Risk AI Use",
+      "label": "Leadership review",
+      "description": "Escalates high-risk AI use cases so accountable leaders accept or reduce residual risk.",
+      "when": {
+        "risk_level": "high"
+      },
+      "severity": "critical",
+      "required_action": "Leadership approval before launch.",
+      "control": "Leadership must approve residual risk before launch."
     }
   ],
   "baseline_controls": [
     "Use approved enterprise account only.",
     "Enable audit logging.",
-    "Require human review of AI-generated outputs."
+    "Require human review before external use of AI-generated outputs.",
+    "Document business owner and acceptable use case."
   ],
   "decisions": {
     "low_pilot": "Approved for pilot",
     "low_production": "Approved with controls",
-    "privacy": "Requires privacy review",
-    "security": "Requires security review",
-    "finance": "Requires finance review",
+    "medium": "Approved with controls",
+    "additional_review": "Requires additional review",
     "high": "Not approved until risks are reduced"
   }
 }
